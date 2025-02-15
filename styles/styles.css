@@ -109,6 +109,21 @@ body {
     align-items: center;
 }
 
+.fixed-image {
+    position: fixed;
+    bottom: 20px; /* Ajuste de valor para acercar el icono a la esquina */
+    right: 10px;  /* Ajuste de valor para acercar el icono a la esquina */
+    width: 150px;  /* Tamaño aumentado */
+    height: auto;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fixed-image:hover {
+    transform: scale(0.8); /* Hace que la imagen crezca un 20% */
+}
+
+
 /* Botón Home */
 .home-button {
     color: white;
