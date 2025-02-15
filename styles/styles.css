@@ -1,0 +1,162 @@
+/* Fuente y ajustes generales */
+body {
+    font-family: "Pixelify Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Contenedor que envuelve las secciones 1 y 2 con el mismo fondo */
+.background-wrapper {
+    background-image: url('../assets/images/fondo.jpg'); /* Ruta de la imagen */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilos generales para las secciones */
+.section {
+    height: 100vh; /* Cada sección ocupa toda la pantalla */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column; /* Asegura que los elementos estén en columna */
+    position: relative;
+}
+
+/* Primera y segunda sección (comparten el mismo fondo a través de .background-wrapper) */
+.first-section, .second-section {
+    color: white;
+}
+
+/* Ajuste del espacio entre la sección 1 y 2 */
+.first-section {
+    padding-bottom: 30px;
+}
+
+.second-section {
+    padding-top: 30px;
+}
+
+/* Texto en la primera sección */
+.first-section h1 {
+    font-size: 4em;
+    margin: 0;
+    text-transform: uppercase;
+    color: #FFD700; /* Dorado */
+    text-shadow: 3px 3px 0px black, 
+                 -3px -3px 0px black, 
+                 3px -3px 0px black, 
+                 -3px 3px 0px black;
+}
+
+.first-section h2 {
+    font-size: 3.5em;
+    margin: 10px 0;
+    color: #FF4500; /* Naranja rojizo */
+    text-shadow: 3px 3px 0px black, 
+                 -3px -3px 0px black, 
+                 3px -3px 0px black, 
+                 -3px 3px 0px black;
+}
+
+/* Burbuja de habla (para la descripción y el texto de la segunda sección) */
+.speech-bubble {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    max-width: 70%;
+    border-radius: 15px;
+    color: white;
+    text-shadow: 2px 2px 0px black;
+    font-size: 1.5em;
+    line-height: 1.5;
+    position: relative;
+}
+
+/* Triángulo de la burbuja */
+.speech-bubble::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+}
+
+/* Sección 3 con un fondo diferente */
+.third-section {
+    background-color: #ddd;
+}
+
+/* Encabezado fijo con botón Home */
+.sticky-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(62, 83, 238);
+    color: white;
+    padding: 15px 0;
+    text-align: left;
+    font-size: 1.2em;
+    font-weight: 700;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+}
+
+/* Botón Home */
+.home-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Espaciado entre icono y texto */
+.home-button .icon {
+    margin-right: 6px;
+}
+
+/* Contenedor flexible para GIF y texto */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    max-width: 80%;
+    flex-wrap: nowrap; /* Evita que los elementos salten en pantallas grandes */
+}
+
+/* GIF */
+.game-gif {
+    width: 600px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Cambia la disposición: GIF arriba, texto abajo */
+        text-align: center;
+    }
+
+    .game-gif {
+        width: 250px;
+        order: -1; /* Asegura que el GIF quede arriba del texto */
+    }
+
+    .speech-bubble {
+        max-width: 90%;
+        font-size: 1.2em;
+    }
+}
