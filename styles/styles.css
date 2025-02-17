@@ -6,12 +6,14 @@ body {
     text-align: center;
 }
 
-/* Contenedor que envuelve las secciones 1 y 2 con el mismo fondo */
+/* Contenedor que envuelve las secciones 1, 2 y 3 con el mismo fondo */
 .background-wrapper {
     background-image: url('../assets/images/fondo.jpg'); /* Ruta de la imagen */
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    position: relative; /* Asegura que no haya solapamiento */
+    z-index: -1; /* Asegura que el fondo esté detrás del contenido */
 }
 
 /* Estilos generales para las secciones */
@@ -21,11 +23,13 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    flex-direction: column; /* Asegura que los elementos estén en columna */
+    flex-direction: column;
     position: relative;
+    background-color: transparent;
+    color: white;
 }
 
-/* Primera y segunda sección (comparten el mismo fondo a través de .background-wrapper) */
+/* Primera y segunda sección */
 .first-section, .second-section {
     color: white;
 }
@@ -41,7 +45,7 @@ body {
 
 /* Texto en la primera sección */
 .first-section h1 {
-    font-size: 4em;
+    font-size: 5em;
     margin: 0;
     text-transform: uppercase;
     color: #FFD700; /* Dorado */
@@ -52,7 +56,7 @@ body {
 }
 
 .first-section h2 {
-    font-size: 3.5em;
+    font-size: 4em;
     margin: 10px 0;
     color: #FF4500; /* Naranja rojizo */
     text-shadow: 3px 3px 0px black, 
@@ -61,7 +65,33 @@ body {
                  -3px 3px 0px black;
 }
 
-/* Burbuja de habla (para la descripción y el texto de la segunda sección) */
+/* Estilos para el título en la segunda sección */
+.second-section-title {
+    text-align: center;
+    font-size: 4em; /* Tamaño del texto */
+    color: #FFD700; /* Color dorado */
+    text-shadow: 3px 3px 0px black, 
+                 -3px -3px 0px black, 
+                 3px -3px 0px black, 
+                 -3px 3px 0px black; /* Efecto de sombra */
+    margin-bottom:40px;
+}
+
+
+/* Estilos para el título en la tercera sección */
+.third-section-title {
+    text-align: center;
+    font-size: 4em; /* Tamaño del texto */
+    color: #ffc21c; /* Color dorado */
+    text-shadow: 3px 3px 0px black, 
+                 -3px -3px 0px black, 
+                 3px -3px 0px black, 
+                 -3px 3px 0px black; /* Efecto de sombra */
+    margin-bottom:40px;
+}
+
+
+/* Burbuja de habla */
 .speech-bubble {
     background: rgba(0, 0, 0, 0.7);
     padding: 20px;
@@ -72,6 +102,36 @@ body {
     font-size: 1.5em;
     line-height: 1.5;
     position: relative;
+}
+
+/* Animación de aparición en la primera sección */
+.first-section {
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Ocultar inicialmente la segunda sección hasta que entre en pantalla */
+.second-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Clase que se agregará cuando la sección sea visible */
+.second-section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Keyframes de la animación */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Triángulo de la burbuja */
@@ -86,9 +146,9 @@ body {
     border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
 }
 
-/* Sección 3 con un fondo diferente */
+/* Sección 3 con fondo común */
 .third-section {
-    background-color: #ddd;
+    background: inherit; /* Hereda el fondo del contenedor */
 }
 
 /* Encabezado fijo con botón Home */
@@ -111,32 +171,32 @@ body {
 
 .fixed-image {
     position: fixed;
-    bottom: 20px; /* Ajuste de valor para acercar el icono a la esquina */
-    right: 10px;  /* Ajuste de valor para acercar el icono a la esquina */
-    width: 150px;  /* Tamaño aumentado */
+    bottom: 20px;
+    right: 10px;
+    width: 150px;
     height: auto;
-    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fixed-image:hover {
-    transform: scale(0.8); /* Hace que la imagen crezca un 20% */
+    transform: scale(0.8);
 }
 
-
-/* Botón Home */
-.home-button {
+/* Botones del encabezado */
+.header-buttons {
     color: white;
     text-decoration: none;
     font-size: 1.2em;
     font-weight: bold;
-    margin-left: 20px;
     display: flex;
     align-items: center;
+    margin-right: 30px;
+    margin-left: 20px;
 }
 
 /* Espaciado entre icono y texto */
-.home-button .icon {
+.header-buttons .icon {
     margin-right: 6px;
 }
 
@@ -147,7 +207,7 @@ body {
     justify-content: center;
     gap: 30px;
     max-width: 80%;
-    flex-wrap: nowrap; /* Evita que los elementos salten en pantallas grandes */
+    flex-wrap: nowrap;
 }
 
 /* GIF */
@@ -158,16 +218,50 @@ body {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+/* Pie de página */
+.sticky-footer {
+    background-color: rgb(62, 83, 238); /* Mismo color que el encabezado */
+    color: white;
+    padding: 10px 20px; /* Aumentar el tamaño del pie de página */
+    text-align: center;
+    position: relative;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.footer-image {
+    width: 180px; /* Ajusta el tamaño de la imagen según lo necesites */
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Estilos adicionales para el pie de página */
+.sticky-footer img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /* Estilos responsivos */
 @media (max-width: 768px) {
     .content-wrapper {
-        flex-direction: column; /* Cambia la disposición: GIF arriba, texto abajo */
+        flex-direction: column;
         text-align: center;
     }
 
     .game-gif {
         width: 250px;
-        order: -1; /* Asegura que el GIF quede arriba del texto */
+        order: -1;
     }
 
     .speech-bubble {

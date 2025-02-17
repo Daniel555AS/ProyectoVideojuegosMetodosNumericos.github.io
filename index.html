@@ -12,16 +12,20 @@
 
     <!-- Enlace al CSS -->
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Enlace al JS-->>
+    <script src="scripts/home.js"></script>
 </head>
 <body>
     <!-- Encabezado fijo -->
     <header class="sticky-header">
-        <a href="#" class="home-button">
+        <a href="#" class="header-buttons">
             <span class="icon">🏠</span> Inicio
+        </a>
+        <a href="#proyectos" class="header-buttons">
+            <span class="icon">🎮</span> Proyectos
         </a>
     </header>
 
-    <!-- Contenedor para el fondo compartido entre la sección 1 y 2 -->
     <div class="background-wrapper">
         <!-- Primera Sección -->
         <section class="first-section section">
@@ -35,32 +39,38 @@
                 </p>
             </div>
         </section>
-
+    
         <!-- Segunda Sección con GIF y Texto -->
         <section class="second-section section">
+            <h1 class="second-section-title">¡ PARTICIPA ! 🏆</h1>
             <div class="content-wrapper">
                 <!-- GIF -->
                 <img src="assets/images/game.gif" alt="Juego en acción" class="game-gif">
-
+    
                 <!-- Cuadro de texto -->
                 <div class="speech-bubble">
                     <p>
                         Explora cada juego, experimenta sus mecánicas y sumérgete en mundos creados con cálculos 
-                        y algoritmos. Tu opinión cuenta: después de jugar, vota por tu favorito y ayúdanos a elegir el mejor.
+                        y algoritmos. Tu opinión cuenta: después de jugar, busca el botón para votar, selecciona tu favorito y ayúdanos a elegir el mejor.
                     </p>
                 </div>
             </div>
         </section>
+    
+        <!-- Tercera Sección -->
+        <section id="proyectos" class="third-section section">
+            <h1 class="third-section-title">NUESTROS PROYECTOS... 🕹️</h1>
+        </section>
     </div>
-
-    <!-- Tercera Sección con un fondo diferente -->
-    <section class="third-section section">
-        <h2>Tercera sección</h2>
-    </section>
 
     <!-- Imagen PNG fija para votación -->
     <a href="https://www.upb.edu.co/es/home" target="_blank">
         <img src="assets/images/boton_votar.png" alt="Icono fijo" class="fixed-image">
     </a>
+
+    <!-- Pie de página -->
+    <footer class="sticky-footer">
+        <img src="assets/images/logo_upb.png" alt="Imagen de pie de página" class="footer-image">
+    </footer>
 </body>
 </html>
