@@ -43,20 +43,26 @@
             <div class="speech-bubble">
                 <h2>¿Cómo Jugar? 🕹️</h2>
                 <p>
-                    - Presiona ESPACIO para hacer que el jugador salte. <br>
-                    - Evita chocar contra los tubos verdes (obstáculos). <br>
-                    - Si chocas, presiona R para reiniciar el juego. <br>
+                    Al iniciar el juego se presiona la tecla Enter para comenzar.
+                    Luego, durante la partida, se debe presionar la barra espaciadora para que el personaje (el pájaro) salte y así evitar los tubos.
+                    Cada vez que se presiona la barra espaciadora también se reproduce un sonido de salto.
                 </p>
             
                 <h2>Método Numérico Implementado 🧮</h2>
                 <p>
-                    Se utilizó la derivada numérica (aproximación de pendiente) para calcular la velocidad vertical del pájaro 
-                    entre frames.
+                    Se implementó la Derivada Numérica
                 </p>
             
                 <h2>¿Para qué se Implementó el Método Numérico? 💭</h2>
                 <p>
-                    Se usó para la la generación adaptativa de obstáculos. 
+                    La derivada numérica se utiliza para medir la pendiente del movimiento vertical del pájaro, calculando su cambio 
+                    de posición (delta y) por unidad de tiempo (delta t).<br>
+                    Este valor de la pendiente se usa como parámetro dinámico en la generación de tubos: <br>
+                    - Mientras más rápido se mueva el pájaro (mayor derivada), más ajustados o impredecibles serán los espacios entre tubos, 
+                    aumentando el reto. <br>
+                    - Esto se logra con una fórmula que toma el valor absoluto de la derivada y lo multiplica por un factor de respuesta 
+                    (response_factor), modificando la posición vertical del hueco entre tubos de forma reactiva. <br>
+                    Así, el juego se adapta al estilo de juego del usuario, haciendo que el entorno responda al comportamiento del jugador.
                 </p>
             </div>
         </section>
