@@ -1,271 +1,377 @@
-/* Fuente y ajustes generales */
+/* General font and layout settings */
 body {
-    font-family: "Pixelify Sans", sans-serif;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+    font-family: "Pixelify Sans", sans-serif; /* Use pixel-style font */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center-align text */
 }
 
-/* Contenedor que envuelve las secciones 1, 2 y 3 con el mismo fondo */
+/* Wrapper for sections 1, 2, and 3 with shared background */
 .background-wrapper {
-    background-image: url('../assets/images/fondo.jpg'); /* Ruta de la imagen */
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    position: relative; /* Asegura que no haya solapamiento */
-    z-index: -1; /* Asegura que el fondo esté detrás del contenido */
+    background-image: url('../assets/images/fondo.jpg'); /* Set background image */
+    background-size: cover; /* Scale image to cover entire area */
+    background-position: center; /* Center the image */
+    background-attachment: fixed; /* Keep background fixed while scrolling */
+    position: relative; /* Set positioning context for child elements */
 }
 
-/* Estilos generales para las secciones */
+/* General styles for all sections */
 .section {
-    height: 100vh; /* Cada sección ocupa toda la pantalla */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    position: relative;
-    background-color: transparent;
-    color: white;
+    height: 100vh; /* Each section takes full viewport height */
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    text-align: center; /* Center text inside elements */
+    flex-direction: column; /* Stack children vertically */
+    position: relative; /* Positioning context for child elements */
+    background-color: transparent; /* No background color */
+    color: white; /* White text color */
 }
 
-/* Primera y segunda sección */
+/* Shared text color for first and second sections */
 .first-section, .second-section {
     color: white;
 }
 
-/* Ajuste del espacio entre la sección 1 y 2 */
+/* Add space below first section */
 .first-section {
     padding-bottom: 30px;
 }
 
+/* Add space above second section */
 .second-section {
     padding-top: 30px;
 }
 
-/* Texto en la primera sección */
+/* Text styles for the first section */
 .first-section h1 {
-    font-size: 5em;
-    margin: 0;
-    text-transform: uppercase;
-    color: #FFD700; /* Dorado */
-    text-shadow: 3px 3px 0px black, 
-                 -3px -3px 0px black, 
-                 3px -3px 0px black, 
+    font-size: 5em; /* Large font size for main heading */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Uppercase text */
+    color: #FFD700; /* Gold color */
+    text-shadow: 3px 3px 0px black,  /* Shadow effect for text */
+                 -3px -3px 0px black,
+                 3px -3px 0px black,
                  -3px 3px 0px black;
 }
 
 .first-section h2 {
-    font-size: 4em;
-    margin: 10px 0;
-    color: #FF4500; /* Naranja rojizo */
-    text-shadow: 3px 3px 0px black, 
-                 -3px -3px 0px black, 
-                 3px -3px 0px black, 
+    font-size: 4em; /* Large font size for subheading */
+    margin: 10px 0; /* Vertical margin */
+    color: #FF4500; /* Reddish orange color */
+    text-shadow: 3px 3px 0px black,  /* Shadow effect for text */
+                 -3px -3px 0px black,
+                 3px -3px 0px black,
                  -3px 3px 0px black;
 }
 
-/* Estilos para el título en la segunda sección */
+/* Styles for the title in the second section */
 .second-section-title {
-    text-align: center;
-    font-size: 4em; /* Tamaño del texto */
-    color: #FFD700; /* Color dorado */
-    text-shadow: 3px 3px 0px black, 
-                 -3px -3px 0px black, 
-                 3px -3px 0px black, 
-                 -3px 3px 0px black; /* Efecto de sombra */
-    margin-bottom:40px;
+    text-align: center; /* Center-align the title */
+    font-size: 4em; /* Set font size */
+    color: #FFD700; /* Gold color */
+    text-shadow: 3px 3px 0px black,  /* Shadow effect for text */
+                 -3px -3px 0px black,
+                 3px -3px 0px black,
+                 -3px 3px 0px black; 
+    margin-bottom:40px; /* Add space below the title */
 }
 
-
-/* Estilos para el título en la tercera sección */
+/* Styles for the title in the third section */
 .third-section-title {
-    text-align: center;
-    font-size: 4em; /* Tamaño del texto */
-    color: #ffc21c; /* Color dorado */
-    text-shadow: 3px 3px 0px black, 
-                 -3px -3px 0px black, 
-                 3px -3px 0px black, 
-                 -3px 3px 0px black; /* Efecto de sombra */
-    margin-bottom:40px;
+    text-align: center; /* Center-align the title */
+    font-size: 4em; /* Set font size */
+    color: #ffc21c; /* Golden color */
+    text-shadow: 3px 3px 0px black,  /* Shadow effect for text */
+                 -3px -3px 0px black,
+                 3px -3px 0px black,
+                 -3px 3px 0px black; 
+    margin-bottom:40px; /* Add space below the title */
 }
 
-
-/* Burbuja de habla */
+/* Speech bubble style */
 .speech-bubble {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 20px;
-    max-width: 70%;
-    border-radius: 15px;
-    color: white;
-    text-shadow: 2px 2px 0px black;
-    font-size: 1.5em;
-    line-height: 1.5;
-    position: relative;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 20px; /* Add padding inside the bubble */
+    max-width: 70%; /* Limit the width of the bubble */
+    border-radius: 15px; /* Rounded corners */
+    color: white; /* White text color */
+    text-shadow: 2px 2px 0px black; /* Text shadow for contrast */
+    font-size: 1.5em; /* Set font size */
+    line-height: 1.5; /* Adjust line spacing for readability */
+    position: relative; /* Position relative for potential child elements */
 }
 
-/* Animación de aparición en la primera sección */
+/* Animation for the appearance of the first section */
 .first-section {
-    animation: fadeInUp 1s ease-in-out;
+    animation: fadeInUp 1s ease-in-out; /* Apply fadeInUp animation with 1s duration and smooth easing */
 }
 
-/* Ocultar inicialmente la segunda sección hasta que entre en pantalla */
+/* Hide the second section initially until it scrolls into view */
 .second-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    opacity: 0; /* Make the section fully transparent */
+    transform: translateY(20px); /* Move the section 20px downward */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and position */
 }
 
-/* Clase que se agregará cuando la sección sea visible */
+/* Class added when the second section becomes visible */
 .second-section.show {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Make the section fully visible */
+    transform: translateY(0); /* Reset the vertical position */
 }
 
-/* Keyframes de la animación */
+/* Keyframes for the fadeInUp animation */
 @keyframes fadeInUp {
     from {
-        opacity: 0;
-        transform: translateY(20px);
+        opacity: 0; /* Start with the element fully transparent */
+        transform: translateY(20px); /* Start by positioning the element 20px below */
     }
     to {
-        opacity: 1;
-        transform: translateY(0);
+        opacity: 1; /* End with the element fully visible */
+        transform: translateY(0); /* End by resetting the position to its original */
     }
 }
 
-/* Triángulo de la burbuja */
+/* Triangle of the speech bubble */
 .speech-bubble::after {
-    content: "";
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    margin-left: -10px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent;
+    content: ""; /* Empty content to create the triangle */
+    position: absolute; /* Position it absolutely relative to the bubble */
+    bottom: -20px; /* Position the triangle 20px below the speech bubble */
+    left: 50%; /* Horizontally center the triangle */
+    margin-left: -10px; /* Offset to make the triangle perfectly centered */
+    border-width: 10px; /* Set the size of the triangle */
+    border-style: solid; /* Solid borders to create the triangle effect */
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent; /* Set triangle color (black) */
 }
 
-/* Sección 3 con fondo común */
+/* Styles for the third section */
 .third-section {
-    background: inherit; /* Hereda el fondo del contenedor */
+    height: auto; /* Allow height to adjust based on content */
+    padding-bottom: 15vh; /* Add space before the footer */
+    padding-top: 15vh; /* Add space above the section */
+    opacity: 0; /* Initially hide the section */
+    transform: translateY(20px); /* Position the section 20px below */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Smooth transition for opacity and position */
 }
 
-/* Encabezado fijo con botón Home */
+/* Class added when the third section becomes visible */
+.third-section.show {
+    opacity: 1; /* Make the section fully visible */
+    transform: translateY(0); /* Reset the position to its original */
+}
+
+/* Fixed header with Home button */
 .sticky-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgb(62, 83, 238);
-    color: white;
-    padding: 15px 0;
-    text-align: left;
-    font-size: 1.2em;
-    font-weight: 700;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    display: flex;
-    align-items: center;
+    position: fixed; /* Fix the header to the top of the page */
+    top: 0; /* Position it at the top */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it span the entire width of the viewport */
+    background-color: rgb(62, 83, 238); /* Set background color */
+    color: white; /* White text color */
+    padding: 15px 0; /* Vertical padding for spacing */
+    text-align: left; /* Align text to the left */
+    font-size: 1.2em; /* Set font size */
+    font-weight: 700; /* Make the text bold */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Vertically center the items within the header */
 }
 
+/* Fixed image at the bottom-right */
 .fixed-image {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    width: 150px;
-    height: auto;
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: fixed; /* Fix the image in place */
+    bottom: 20px; /* Position it 20px above the bottom of the viewport */
+    right: 10px; /* Position it 10px from the right edge */
+    width: 150px; /* Set a fixed width */
+    height: auto; /* Maintain aspect ratio */
+    z-index: 1000; /* Keep the image above other elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
 }
 
+/* Hover effect for the fixed image */
 .fixed-image:hover {
-    transform: scale(0.8);
+    transform: scale(0.8); /* Slightly reduce size when hovered */
 }
 
-/* Botones del encabezado */
+/* Header buttons styles */
 .header-buttons {
-    color: white;
-    text-decoration: none;
-    font-size: 1.2em;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-    margin-left: 20px;
+    color: white; /* Set the text color to white */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.2em; /* Set font size */
+    font-weight: bold; /* Make the text bold */
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Vertically align items */
+    margin-right: 30px; /* Add space to the right */
+    margin-left: 20px; /* Add space to the left */
 }
 
-/* Espaciado entre icono y texto */
+/* Spacing between the icon and text inside the header button */
 .header-buttons .icon {
-    margin-right: 6px;
+    margin-right: 6px; /* Add space between the icon and text */
 }
 
-/* Contenedor flexible para GIF y texto */
+/* Hover effect for header buttons */
+.header-buttons:hover {
+    color: #FFD700; /* Change text color to gold on hover */
+    text-shadow: 2px 2px 0px black; /* Add black text shadow */
+    transform: scale(1.05); /* Slightly enlarge the button */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and size */
+}
+
+/* Flex container for GIF and text */
 .content-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    max-width: 80%;
-    flex-wrap: nowrap;
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Vertically center the items */
+    justify-content: center; /* Horizontally center the items */
+    gap: 30px; /* Set space between items */
+    max-width: 80%; /* Limit the container width to 80% of its parent */
+    flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
 }
 
-/* GIF */
+/* GIF styling */
 .game-gif {
-    width: 600px;
-    height: auto;
-    border-radius: 20px;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    width: 600px; /* Set a fixed width for the GIF */
+    height: auto; /* Maintain the aspect ratio */
+    border-radius: 20px; /* Apply rounded corners */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect around the GIF */
 }
 
-/* Pie de página */
+/* Grid layout for project cards */
+.projects-grid {
+    display: grid; /* Use CSS Grid for layout */
+    grid-template-columns: repeat(3, 1fr); /* Create three equal-width columns */
+    gap: 4vh 3vw; /* Set vertical and horizontal spacing between items */
+    margin-top: 5vh; /* Add space above the grid */
+    padding: 0 5vw; /* Add horizontal padding */
+}
+
+/* Styling for individual project cards */
+.project-card {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 2vh; /* Rounded corners */
+    overflow: hidden; /* Hide any overflow outside the card */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow around the card */
+    display: flex; /* Use Flexbox for layout inside the card */
+    flex-direction: column; /* Stack content vertically */
+    height: 55vh; /* Set a fixed height for the card */
+    cursor: pointer; /* Change cursor to indicate interactivity */
+    opacity: 100; /* Fully opaque */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease-in-out; /* Smooth transitions for hover effects */
+}
+
+/* Styling for the project image */
+.project-image {
+    width: 100%; /* Make the image span the full width of the card */
+    height: 80%; /* Set the height of the image */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+/* Styling for the project info section */
+.project-info {
+    background-color: #3e53ee; /* Set background color to blue */
+    color: white; /* Set text color to white */
+    padding: 1vh; /* Add padding inside the section */
+    text-align: center; /* Center the text */
+    height: 25%; /* Set fixed height for the info section */
+}
+
+/* Styling for the project title */
+.project-info h3 {
+    margin: 0.5vh 0 0; /* Add margin around the title */
+    font-size: 3.2vh; /* Set font size relative to viewport height */
+}
+
+/* Styling for the project description */
+.project-info p {
+    margin: 0; /* Remove margin */
+    font-size: 2vh; /* Set font size relative to viewport height */
+    opacity: 0.9; /* Slightly reduce opacity for text */
+}
+
+/* Hover effect for project cards */
+.project-card:hover {
+    transform: translateY(-1.5vh) scale(1.03); /* Move the card up and slightly enlarge it */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4); /* Add a stronger shadow on hover */
+}
+
+/* Footer styles */
 .sticky-footer {
-    background-color: rgb(62, 83, 238); /* Mismo color que el encabezado */
-    color: white;
-    padding: 10px 20px; /* Aumentar el tamaño del pie de página */
-    text-align: center;
-    position: relative;
+    background-color: rgb(62, 83, 238); /* Same color as the header */
+    color: white; /* Set text color to white */
+    padding: 10px 20px; /* Increase padding for a larger footer */
+    text-align: center; /* Center-align the text */
+    position: relative; /* Ensure it's positioned relative to the page */
 }
 
+/* Layout for footer content */
 .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    display: flex; /* Use Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the items horizontally */
+    justify-content: center; /* Center-align the items vertically */
 }
 
+/* Footer paragraph styling */
 .footer-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
+    font-size: 1.2em; /* Set font size */
+    margin-bottom: 20px; /* Add space below the paragraph */
 }
 
+/* Footer image styling */
 .footer-image {
-    width: 180px; /* Ajusta el tamaño de la imagen según lo necesites */
-    height: auto;
-    margin-top: 10px;
+    width: 180px; /* Set the image width */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 10px; /* Add space above the image */
 }
 
-/* Estilos adicionales para el pie de página */
+/* Additional styles for the footer image */
 .sticky-footer img {
-    max-width: 100%;
-    height: auto;
+    max-width: 100%; /* Ensure the image doesn't exceed the container's width */
+    height: auto; /* Maintain the image's aspect ratio */
 }
 
-
-/* Estilos responsivos */
+/* Responsive styles for smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
+    /* Change content wrapper layout to column on smaller screens */
     .content-wrapper {
-        flex-direction: column;
-        text-align: center;
+        flex-direction: column; /* Stack items vertically */
+        text-align: center; /* Center-align the text */
     }
 
+    /* Adjust GIF size and order */
     .game-gif {
-        width: 250px;
-        order: -1;
+        width: 250px; /* Reduce GIF width */
+        order: -1; /* Move the GIF to appear first */
     }
 
+    /* Adjust speech bubble size and font */
     .speech-bubble {
-        max-width: 90%;
-        font-size: 1.2em;
+        max-width: 90%; /* Limit the speech bubble width to 90% */
+        font-size: 1.2em; /* Increase font size slightly */
+    }
+}
+
+/* Additional responsive styles for project grid on smaller screens */
+@media (max-width: 768px) {
+    /* Adjust the grid layout for project cards */
+    .projects-grid {
+        grid-template-columns: 1fr; /* Stack project cards in a single column */
+        padding: 0 2vw; /* Add horizontal padding */
+    }
+
+    /* Adjust project card height */
+    .project-card {
+        height: 40vh; /* Reduce the height of project cards */
+    }
+
+    /* Adjust project title font size */
+    .project-info h3 {
+        font-size: 2.5vh; /* Decrease font size */
+    }
+
+    /* Adjust project description font size */
+    .project-info p {
+        font-size: 2vh; /* Decrease font size */
     }
 }

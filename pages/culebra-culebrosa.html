@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Culebra Culebrosa</title>
+
+    <!-- Pixelify Sans font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet"/>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🕹️</text></svg>">
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="../styles/game-page-styles.css" />
+    
+</head>
+<body>
+    <!-- Fixed header -->
+    <header class="sticky-header">
+        <a href="../index.html" class="header-buttons">
+            <span class="icon">🏠</span> Inicio
+        </a>
+    </header>
+
+    <!-- Background -->
+    <div class="background-wrapper">
+        <!-- Video Game Section -->
+        <section class="first-section section">
+            <h1>Culebra Culebrosa</h1>
+        
+            <img src="../assets/images/culebra-culebrosa.jpeg" alt="Imagen del juego" class="game-image" />
+
+            <a href="https://samuelarangoizad.github.io/Game_With_Method/" 
+            class="play-button" 
+            target="_blank" 
+            rel="noopener noreferrer">
+            Jugar Ahora ▶
+            </a>
+
+            </a>
+
+            <div class="speech-bubble">
+                <h2>¿Cómo Jugar? 🕹️</h2>
+                <p>
+                    El jugador controla la serpiente mientras esquiva al enemigo y recoge comida para aumentar la puntuación. 
+                    Los controles básicos son las teclas de dirección, donde↑es hacia arriba, ↓es hacia abajo,  → es derecha y  
+                    ← es izquierda.
+                </p>
+            
+                <h2>Método Numérico Implementado 🧮</h2>
+                <p>
+                    Interpolación Lineal: Primero avanza en horizontal (izquierda/derecha) si estás más lejos en ese eje, o en vertical
+                    (arriba/abajo) si estás más lejos verticalmente. Luego, ajusta suavemente la otra dirección para seguirte en línea
+                    casi recta, como un GPS que se recalibra. ¡Cada punto que atrapas lo hace mejorar su cálculo, volviendo su movimiento
+                    más preciso y difícil de esquivar! Al principio se mueve de forma algo torpe, pero con cada punto… ¡se convierte en
+                    un cazador imparable!
+                </p>
+            
+                <h2>¿Para qué se Implementó el Método Numérico? 💭</h2>
+                <p>
+                    El método numérico se implementa en la lógica del movimiento del enemigo dentro de la función en el movimiento del 
+                    enemigo, donde se usa interpolación lineal para generar puntos y por medio de los puntos estimar la posición del 
+                    jugador, a medida que aumentan los puntos obtenidos, la interpolación estima de forma más precisa para llegar a 
+                    la posición deseada.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <!-- Fixed PNG image for voting -->
+    <a href="https://www.upb.edu.co/es/home" target="_blank">
+        <img src="../assets/images/boton_votar.png" alt="Icono fijo" class="fixed-image">
+    </a>
+
+    <!-- Footer -->
+    <footer class="sticky-footer">
+        <img src="../assets/images/logo_upb.png" alt="Imagen de pie de página" class="footer-image" />
+    </footer>
+</body>
+</html>

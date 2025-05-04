@@ -1,0 +1,217 @@
+/* General font and layout adjustments */
+body {
+    font-family: "Pixelify Sans", sans-serif; /* Set custom font for the body */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    text-align: center; /* Center-align the text */
+}
+
+/* General background styling */
+.background-wrapper {
+    background-image: url('../assets/images/fondo.jpg'); /* Set background image */
+    background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center; /* Center the background image */
+    background-attachment: fixed; /* Fix the background image so it stays in place while scrolling */
+    position: relative; /* Set relative positioning for layering purposes */
+    z-index: auto; /* Ensure the background doesn't interfere with other elements */
+    padding-top: 20vh; /* Add space at the top, 20% of the viewport height */
+}
+
+/* First section styling */
+.first-section {
+    min-height: 100vh; /* Ensure the section takes up at least the full height of the viewport */
+    display: flex; /* Use Flexbox for layout */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Horizontally center items */
+    text-align: center; /* Center-align the text */
+    flex-direction: column; /* Stack items vertically */
+    position: relative; /* Set relative positioning for potential absolute positioning of child elements */
+    background-color: transparent; /* Set a transparent background */
+    color: white; /* Set text color to white */
+    padding-bottom: 30px; /* Add padding at the bottom */
+    animation: fadeInUp 1s ease-in-out; /* Apply fade-in-up animation */
+}
+
+/* Styling for the large title (h1) */
+.first-section h1 {
+    font-size: 5em; /* Set font size to be very large */
+    margin: 0; /* Remove default margin */
+    text-transform: uppercase; /* Convert text to uppercase */
+    color: #FFD700; /* Set the title color to gold */
+    text-shadow: 3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black; /* Add a shadow effect to the text */
+}
+
+/* Styling for the subtitle (h2) */
+.first-section h2 {
+    font-size: 1.5em; /* Set a smaller font size for the subtitle */
+    margin: 10px 0; /* Add vertical margin around the subtitle */
+    color: #2dcbff; /* Set the subtitle color to light blue */
+    text-shadow: 3px 3px 0px black, -3px -3px 0px black, 3px -3px 0px black, -3px 3px 0px black; /* Apply shadow effect similar to the title */
+}
+
+/* Speech bubble styling */
+.speech-bubble {
+    background: rgba(0, 0, 0, 0.7); /* Set a semi-transparent black background */
+    padding: 20px; /* Add padding inside the bubble */
+    max-width: 70%; /* Limit the maximum width of the bubble to 70% of its parent */
+    border-radius: 15px; /* Round the corners of the bubble */
+    color: white; /* Set text color to white */
+    text-shadow: 2px 2px 0px black; /* Add a subtle black text shadow for better contrast */
+    font-size: 1.5em; /* Increase the font size inside the bubble */
+    line-height: 1.5; /* Adjust line height for better text readability */
+    position: relative; /* Set relative positioning to allow the use of absolute positioning for the pseudo-element */
+}
+
+/* Triangle shape for the speech bubble */
+.speech-bubble::after {
+    content: ""; /* Insert an empty content element to create the triangle */
+    position: absolute; /* Position it absolutely within the speech bubble */
+    bottom: -20px; /* Position the triangle 20px below the bottom of the bubble */
+    left: 50%; /* Center the triangle horizontally */
+    margin-left: -10px; /* Offset the triangle to the left by half its width to align it properly */
+    border-width: 10px; /* Set the size of the triangle */
+    border-style: solid; /* Make the borders solid to form the triangle */
+    border-color: rgba(0, 0, 0, 0.7) transparent transparent transparent; /* Set the triangle's color and transparency */
+}
+
+/* Keyframes for the fadeInUp animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0; /* Start with the element fully transparent */
+        transform: translateY(20px); /* Start with the element 20px below its final position */
+    }
+    to {
+        opacity: 1; /* End with the element fully visible */
+        transform: translateY(0); /* Move the element back to its original position */
+    }
+}
+
+/* Sticky header styling */
+.sticky-header {
+    position: fixed; /* Fix the header at the top of the page */
+    top: 0; /* Place the header at the very top of the page */
+    left: 0; /* Align the header to the left side */
+    width: 100%; /* Make the header span the full width of the page */
+    background-color: rgb(62, 83, 238); /* Set a blue background color */
+    color: white; /* Set the text color to white */
+    padding: 15px 0; /* Add padding above and below the content */
+    text-align: left; /* Align the text to the left */
+    font-size: 1.2em; /* Set a slightly larger font size */
+    font-weight: 700; /* Make the font weight bold */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow below the header */
+    z-index: 1000; /* Ensure the header stays on top of other elements */
+    display: flex; /* Use Flexbox layout */
+    align-items: center; /* Vertically align the items in the header */
+}
+
+/* Styling for the header buttons */
+.header-buttons {
+    color: white; /* Set the text color of the buttons to white */
+    text-decoration: none; /* Remove any default text decoration (like underlines) */
+    font-size: 1.2em; /* Set a slightly larger font size for the buttons */
+    font-weight: bold; /* Make the font weight bold */
+    display: flex; /* Use Flexbox layout for the buttons */
+    align-items: center; /* Vertically align the icons and text */
+    margin-right: 30px; /* Add space to the right of each button */
+    margin-left: 20px; /* Add space to the left of each button */
+}
+
+/* Space between the icon and text in the header buttons */
+.header-buttons .icon {
+    margin-right: 6px; /* Add space between the icon and the text */
+}
+
+/* Hover effect for header buttons */
+.header-buttons:hover {
+    color: #FFD700; /* Change the text color to gold when hovering */
+    text-shadow: 2px 2px 0px black; /* Add a black shadow effect to the text */
+    transform: scale(1.05); /* Slightly enlarge the button when hovered */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for color and size change */
+}
+
+/* Fixed voting image styling */
+.fixed-image {
+    position: fixed; /* Fix the image in place relative to the viewport */
+    bottom: 20px; /* Position the image 20px from the bottom of the screen */
+    right: 10px; /* Position the image 10px from the right edge of the screen */
+    width: 150px; /* Set the width of the image */
+    height: auto; /* Maintain the aspect ratio of the image */
+    z-index: 1000; /* Ensure the image appears above other content */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow effects */
+}
+
+/* Hover effect for the fixed image */
+.fixed-image:hover {
+    transform: scale(0.8); /* Reduce the size of the image to 80% on hover */
+}
+
+/* Styling for the game image */
+.game-image {
+    float: right; /* Align the image to the right of its container */
+    width: 30vw; /* Set the width of the image to 30% of the viewport width */
+    height: auto; /* Maintain the aspect ratio of the image */
+    margin: 20px; /* Add 20px of margin around the image */
+    border-radius: 15px; /* Round the corners of the image */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5); /* Add a shadow effect around the image */
+}
+
+/* Play button styling */
+.play-button {
+    display: inline-block; /* Make the button an inline-block element for proper alignment */
+    margin: 4vh auto; /* Center the button horizontally with a margin of 4vh from the top */
+    padding: 3vh 6vw; /* Add padding around the text, 3vh top/bottom and 6vw left/right */
+    background-color: #3ece00; /* Set a green background color for the button */
+    color: black; /* Set the text color to black */
+    font-size: 3.5vh; /* Set the font size relative to the viewport height */
+    font-weight: bold; /* Make the font bold */
+    text-decoration: none; /* Remove any default text decoration (like underlines) */
+    border-radius: 1.5vh; /* Round the corners of the button */
+    box-shadow: 0.5vh 0.5vh 1vh rgba(0, 0, 0, 0.5); /* Add a subtle shadow for depth */
+    transition: transform 0.2s ease, background-color 0.3s ease; /* Smooth transition for scaling and background color */
+    font-family: "Pixelify Sans", sans-serif; /* Use the "Pixelify Sans" font for the button text */
+    text-shadow: 0.3vh 0.3vh 0px #fff; /* Add a slight white text shadow for better visibility */
+    z-index: 1; /* Ensure the button stays on top of other content */
+    position: relative; /* Make the button’s position relative for better control */
+}
+
+/* Hover effect for the play button */
+.play-button:hover {
+    background-color: #01e101; /* Change the background color to a brighter green on hover */
+    transform: scale(1.05); /* Slightly enlarge the button when hovered */
+}
+
+/* Footer styling */
+.sticky-footer {
+    background-color: rgb(62, 83, 238); /* Set the background color to a blue shade */
+    color: white; /* Set the text color to white */
+    padding: 10px 20px; /* Add padding inside the footer for spacing */
+    text-align: center; /* Center the text inside the footer */
+    position: relative; /* Ensure the footer has a relative position */
+}
+
+/* Footer image styling */
+.footer-image {
+    width: 180px; /* Set the width of the footer image */
+    height: auto; /* Maintain the aspect ratio of the image */
+    margin-top: 10px; /* Add some space above the image */
+}
+
+/* Responsive styling for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Adjust speech bubble size and font on smaller screens */
+    .speech-bubble {
+        max-width: 90%; /* Allow speech bubble to take up more space (90%) */
+        font-size: 1.2em; /* Make the font slightly smaller */
+    }
+
+    /* Adjust font size for the title in the first section on smaller screens */
+    .first-section h1 {
+        font-size: 3em; /* Reduce the size of the heading */
+    }
+
+    /* Adjust font size for the subtitle in the first section on smaller screens */
+    .first-section h2 {
+        font-size: 2.5em; /* Reduce the size of the subheading */
+    }
+}
+
